@@ -91,11 +91,13 @@ async function main() {
   dashboard.innerHTML = "";
   renderUser(user);
   renderActivities(activities, "weekly");
-  const daily = document.querySelector("#daily");
-  const weekly = document.querySelector("#weekly");
-  const monthly = document.querySelector("#monthly");
-  weekly.classList.add("active");
-  const timeframeButtons = [daily, weekly, monthly];
+  const timeframeButtons = document.querySelectorAll(
+    ".timeframe-picker button"
+  );
+  timeframeButtons[0].id = "daily";
+  timeframeButtons[1].id = "weekly";
+  timeframeButtons[1].classList.add("active");
+  timeframeButtons[2].id = "monthly";
   const handleTimeframePickerClick = (event) => {
     const target = event.currentTarget;
     if (target.classList.contains("active")) return;
