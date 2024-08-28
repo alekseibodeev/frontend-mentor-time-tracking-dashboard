@@ -26,7 +26,9 @@
         <img class="avatar user-details__avatar skeleton" alt="" />
         <h1 class="user-details__title">
           Report for<br />
-          <span class="user-details__name skeleton skeleton-text"></span>
+          <span class="user-details__name skeleton skeleton-text"
+            ><span class="visually-hidden">Loading...</span></span
+          >
         </h1>
       </div>
       <ul role="list" class="timeframe-picker">
@@ -45,7 +47,9 @@
   <template id="activity-card-template">
     <article class="activity-card skeleton">
       <div class="activity-card__body">
-        <h2 class="activity-card__title skeleton skeleton-text"></h2>
+        <h2 class="activity-card__title skeleton skeleton-text">
+          <span class="visually-hidden">Loading...</span>
+        </h2>
         <button class="button button_ghost activity-card__menu">
           <svg
             class="activity-card__menu-icon"
@@ -60,8 +64,12 @@
             />
           </svg>
         </button>
-        <div class="activity-card__current skeleton skeleton-text"></div>
-        <div class="activity-card__previous skeleton skeleton-text"></div>
+        <div class="activity-card__current skeleton skeleton-text">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="activity-card__previous skeleton skeleton-text">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
     </article>
   </template>
